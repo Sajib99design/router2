@@ -1,17 +1,20 @@
-// import { useEffect, useState } from 'react'
+
 import { useLoaderData } from 'react-router'
 import Footer from '../Components/Footer'
 import Navbar from '../Components/Navbar'
 import PlantCard from '../Components/PlantCard'
+import { useEffect, useState } from 'react'
 
 const Home = () => {
-  // useEffect(() => {
-  //   fetch('https://openapi.programming-hero.com/api/plants')
-  //     .then(res => res.json())
-  //     .then(data => setPlants(data?.plants))
-  // }, [])
-  // console.log(plants)
-  const { plants } = useLoaderData()
+  const [plants, setPlants] = useState([]);
+
+  useEffect(() => {
+    fetch('https://openapi.programming-hero.com/api/plants')
+      .then(res => res.json())
+      .then(data => setPlants(data?.plants));
+  }, [])
+  console.log(plants)
+  // const { plants } = useLoaderData()
 
   return (
     <div>
