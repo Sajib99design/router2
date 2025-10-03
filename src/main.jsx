@@ -19,7 +19,7 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
-        loader: () => fetch('https://openapi.programming-hero.com/api/plants'),
+        loader: () => fetch('https://openapi.programming-hero.com/api/plants')
       },
       {
         path: '/home',
@@ -43,6 +43,10 @@ const router = createBrowserRouter([
         path: '/cart',
         Component: Cart,
       },
+      {
+        path: 'plant-details2',
+        Component: Contact
+      }
     ],
   },
 

@@ -7,8 +7,8 @@ import { CartContext } from '../Providers/CartContext'
 const PlantDetails = () => {
   const { cart, setCart } = useContext(CartContext)
 
-  // const { id } = useParams()
-  // console.log(id)
+  const { id } = useParams()
+  console.log(id)
   // const [plant, setPlant] = useState({})
   // useEffect(() => {
   //   // fetch(`https://openapi.programming-hero.com/api/plant/${id}`)
